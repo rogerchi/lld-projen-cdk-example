@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Lambda Live Debugger",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "/Users/rogerchi/repos/lld-projen-cdk-example/node_modules/.bin/lld",
+      "runtimeArgs": [],
+      "console": "integratedTerminal",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "env": {}
+    }
+  ]
+}

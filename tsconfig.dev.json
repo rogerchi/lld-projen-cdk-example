@@ -28,6 +28,7 @@
   "include": [
     "src/**/*.ts",
     "test/**/*.ts",
+    "./lldebugger.config.ts",
     ".projenrc.ts",
     "projenrc/**/*.ts"
   ],

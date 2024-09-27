@@ -1,27 +1,30 @@
 {
   "dependencies": [
     {
+      "name": "@types/aws-lambda",
+      "type": "build"
+    },
+    {
       "name": "@types/jest",
       "type": "build"
     },
     {
       "name": "@types/node",
-      "version": "^18",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
-      "version": "^6",
+      "version": "^7",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/parser",
-      "version": "^6",
+      "version": "^7",
       "type": "build"
     },
     {
       "name": "aws-cdk",
-      "version": "^2.1.0",
+      "version": "^2.160.0",
       "type": "build"
     },
     {
@@ -51,6 +54,10 @@
       "type": "build"
     },
     {
+      "name": "lambda-live-debugger",
+      "type": "build"
+    },
+    {
       "name": "projen",
       "type": "build"
     },
@@ -68,7 +75,7 @@
     },
     {
       "name": "aws-cdk-lib",
-      "version": "^2.1.0",
+      "version": "^2.160.0",
       "type": "runtime"
     },
     {
