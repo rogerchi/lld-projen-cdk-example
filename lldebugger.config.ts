@@ -2,7 +2,7 @@ import { type LldConfigTs } from 'lambda-live-debugger';
 
 export default {
   // Framework to use
-  framework: 'other',
+  framework: 'cdk',
   // AWS CDK framework context
   // context:
   // Serverless Framework stage
@@ -12,7 +12,7 @@ export default {
   // Filter by function name. You can use * as a wildcard
   // function:
   // AWS profile
-  // profile:
+  // profile: '',
   // AWS region
   region: 'us-east-1',
   // AWS role
@@ -28,15 +28,13 @@ export default {
   // Observable mode interval
   // interval:
   // Verbose logging
-  verbose: false,
+  verbose: true,
   // Modify Lambda function list or support custom framework
-  getLambdas: async (_foundLambdas) => {
-    return [
-      {
-        functionName:
-          'lld-projen-cdk-example-personal-MyFunction3BAA72D1-HFiqH2xKCdlz',
-        codePath: 'src/handlers/my-function.ts',
-      },
-    ];
+  getLambdas: async (foundLambdas) => {
+    // console.log('foundLambdas', foundLambdas);
+    return foundLambdas?.map((fn) => ({
+      ...fn,
+      esBuildOptions: { ...fn.esBuildOptions, metafile: false },
+    }));
   },
 } satisfies LldConfigTs;

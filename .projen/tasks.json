@@ -64,6 +64,17 @@
       "name": "compile",
       "description": "Only compile"
     },
+    "debug:me": {
+      "name": "debug:me",
+      "env": {
+        "PERSONAL_STACK_NAME": "$(whoami)"
+      },
+      "steps": [
+        {
+          "exec": "npx lld"
+        }
+      ]
+    },
     "default": {
       "name": "default",
       "description": "Synthesize project files",

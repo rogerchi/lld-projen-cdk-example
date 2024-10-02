@@ -19,6 +19,13 @@ project.addTask('deploy:me', {
   },
 });
 
+project.addTask('debug:me', {
+  exec: 'npx lld',
+  env: {
+    PERSONAL_STACK_NAME: '$(whoami)',
+  },
+});
+
 project.tsconfigDev.addInclude('./lldebugger.config.ts');
 
 project.addGitIgnore('.lldebugger');

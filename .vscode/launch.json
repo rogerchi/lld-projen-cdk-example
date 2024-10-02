@@ -8,10 +8,10 @@
       "runtimeExecutable": "/Users/rogerchi/repos/lld-projen-cdk-example/node_modules/.bin/lld",
       "runtimeArgs": [],
       "console": "integratedTerminal",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
-      "env": {}
+      "skipFiles": ["<node_internals>/**"],
+      "env": {
+        "PERSONAL_STACK_NAME": "rogerchi"
+      }
     }
   ]
 }
